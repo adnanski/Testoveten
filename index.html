@@ -186,6 +186,12 @@
     <footer>&copy; 2026 TestoVeten - Platformë Edukative</footer>
 
     <script>
+        // --- DEDEKTUES GABIMESH ---
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            alert("GABIM NË KOD!\n\nMesazhi: " + msg + "\nRrjeshti: " + lineNo);
+            return false;
+        };
+
         const tests = {
             islamofobia: {
                 title: "Islamofobia",
@@ -213,4 +219,10 @@
                     "Të huajt duhet të heqin dorë nga kultura e tyre.",
                     "Ndihem i pasigurt kur dëgjoj gjuhë të huaja në rrugë.",
                     "Më pengon kur shoh shumë të huaj në qytetin tim.",
-                    "Besoj se raca/kombësia ime është nat
+                    "Besoj se raca/kombësia ime është natyrshëm më inteligjente.",
+                    "Qeveria shpenzon tepër para për refugjatët."
+                ]
+            },
+            seksizmi: {
+                title: "Seksizmi",
+                icon: "⚖️",
