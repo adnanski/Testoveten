@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TestoVeten - Platforma e Analizës Sociale</title>
+    <title>TestoVeten</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
@@ -74,11 +74,9 @@
         }
 
         .icon { font-size: 3rem; margin-bottom: 15px; display: block; }
-
         .card h3 { font-size: 1.3rem; margin-bottom: 8px; color: var(--text-dark); }
         .card p { color: var(--text-light); font-size: 0.9rem; }
 
-        /* Quiz & Result Views */
         .quiz-container, .result-container {
             background: var(--card-bg);
             padding: 30px;
@@ -93,12 +91,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .question-item {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
-
+        .question-item { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
         .question-text { font-size: 1.1rem; font-weight: 600; margin-bottom: 15px; }
 
         .options-group {
@@ -123,7 +116,6 @@
         }
 
         .option-label:hover { color: var(--primary-color); background: #eee; border-radius: 5px;}
-
         input[type="radio"] { margin-bottom: 5px; accent-color: var(--primary-color); transform: scale(1.2); cursor: pointer; }
 
         .btn {
@@ -139,7 +131,6 @@
             margin-top: 15px;
             transition: background 0.3s;
         }
-
         .btn:hover { background-color: #5649c0; }
         .btn-outline { background: transparent; border: 2px solid #ccc; color: #666; margin-top: 10px; }
         .btn-outline:hover { border-color: #333; color: #333; }
@@ -157,9 +148,7 @@
             margin: 0 auto 20px;
             color: var(--primary-color);
         }
-
         .interpretation { text-align: center; font-size: 1.1rem; margin-bottom: 30px; }
-
         footer { text-align: center; padding: 20px; font-size: 0.8rem; color: var(--text-light); margin-top: auto; }
 
         @media (max-width: 600px) {
@@ -177,12 +166,10 @@
     </header>
 
     <div class="container">
-        
-        <div id="menu-view" class="menu-grid">
-            </div>
+        <div id="menu-view" class="menu-grid"></div>
 
         <div id="quiz-view" class="quiz-container">
-            <h2 id="quiz-title" style="text-align: center; margin-bottom: 20px; color: var(--primary-color);">Titulli</h2>
+            <h2 id="quiz-title" style="text-align: center; margin-bottom: 20px; color: var(--primary-color);"></h2>
             <div id="questions-wrapper"></div>
             <button class="btn" onclick="submitQuiz()">Shiko Rezultatin</button>
             <button class="btn btn-outline" onclick="goHome()">Anulo</button>
@@ -194,15 +181,11 @@
             <div id="result-text" class="interpretation"></div>
             <button class="btn" onclick="goHome()">Zgjidh një Test Tjetër</button>
         </div>
-
     </div>
 
-    <footer>
-        &copy; 2026 TestoVeten - Platformë Edukative
-    </footer>
+    <footer>&copy; 2026 TestoVeten - Platformë Edukative</footer>
 
     <script>
-        // --- DATA E TESTEVE ---
         const tests = {
             islamofobia: {
                 title: "Islamofobia",
@@ -230,69 +213,4 @@
                     "Të huajt duhet të heqin dorë nga kultura e tyre.",
                     "Ndihem i pasigurt kur dëgjoj gjuhë të huaja në rrugë.",
                     "Më pengon kur shoh shumë të huaj në qytetin tim.",
-                    "Besoj se raca/kombësia ime është natyrshëm më inteligjente.",
-                    "Qeveria shpenzon tepër para për refugjatët."
-                ]
-            },
-            seksizmi: {
-                title: "Seksizmi",
-                icon: "⚖️",
-                desc: "Stereotipet gjinore burrë/grua.",
-                questions: [
-                    "Gratë janë më emocionale dhe më pak logjike se burrat.",
-                    "Detyra kryesore e gruas është shtëpia.",
-                    "Burrat kanë më shumë të drejtë për punë se gratë.",
-                    "Veshja provokuese justifikon ngacmimin.",
-                    "Burrat duhet të kenë fjalën e fundit në familje.",
-                    "Një burrë që qan tregon shenja dobësie.",
-                    "Është e papranueshme që gruaja të fitojë më shumë para se burri.",
-                    "Gratë shpesh e përdorin 'viktimizimin' për të përfituar."
-                ]
-            },
-            snobizmi: {
-                title: "Snobizmi",
-                icon: "💎",
-                desc: "A gjykon njerëzit nga paratë dhe statusi?",
-                questions: [
-                    "Njerëzit me rroba të lira s'kanë shije.",
-                    "Do më vinte turp nëse partneri ka makinë të vjetër.",
-                    "Të pasurit janë më të zgjuar se të varfrit.",
-                    "Pa iPhone je mbrapa me kohën.",
-                    "Respektoj më shumë ata që vishen shtrenjtë.",
-                    "Ndihem keq nëse më shohin duke blerë gjëra të lira.",
-                    "Pushimet në vendet e rajonit janë për ata pa buxhet.",
-                    "E gjykoj njeriun kryesisht nga dukja e jashtme."
-                ]
-            },
-            bodyimage: {
-                title: "Fatfobia / Trupi",
-                icon: "🍔", 
-                desc: "Paragjykimet ndaj njerëzve mbipeshë.",
-                questions: [
-                    "Njerëzit mbipeshë janë thjesht dembelë.",
-                    "Do më vinte zor të prezantoja partnerin mbipeshë.",
-                    "Të shëndoshët s'duhet të veshin rroba të ngushta.",
-                    "Gjykoj njerëzit bazuar në peshën e tyre.",
-                    "Vlera e njeriut varet nga sa tërheqës është.",
-                    "Mendoj se njerëzit e shëndoshë hanë shumë pa kontroll.",
-                    "Do t'i sugjeroja dikujt të dobësohej edhe pa ma kërkuar mendimin.",
-                    "Njerëzit me trup perfekt janë më të suksesshëm në jetë."
-                ]
-            },
-            narcizmi: {
-                title: "Narcizmi (Ego)",
-                icon: "🪞",
-                desc: "Sa je i dashuruar me veten?",
-                questions: [
-                    "Jam shumë më i talentuar se të tjerët.",
-                    "Më acaron kur s'më kushtojnë vëmendje.",
-                    "Rregullat vlejnë për të tjerët, jo për mua.",
-                    "Njerëzit duhet të më admirojnë.",
-                    "E kam vështirë të ndjej keqardhje për të tjerët.",
-                    "Shpesh e shoh veten në vitrina dyqanesh duke ecur.",
-                    "Bota do ishte vend më i mirë nëse të gjithë mendonin si unë.",
-                    "Më duket humbje kohe të dëgjoj problemet e të tjerëve."
-                ]
-            },
-            rajonalizmi: {
-                title: "Krahinorizmi",
+                    "Besoj se raca/kombësia ime është nat
