@@ -15,166 +15,46 @@
             --text-dark: #2d3436;
             --text-light: #636e72;
         }
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-dark);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px;
-            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.2);
-        }
-
+        body { font-family: 'Poppins', sans-serif; background-color: var(--background-color); color: var(--text-dark); line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 40px 20px; text-align: center; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; box-shadow: 0 4px 15px rgba(108, 92, 231, 0.2); }
         header h1 { font-size: 2.5rem; margin-bottom: 10px; }
         header p { font-size: 1.1rem; opacity: 0.9; }
-
-        .container {
-            max-width: 1000px;
-            margin: -30px auto 40px;
-            padding: 20px;
-            flex: 1;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-align: center;
-            border-top: 5px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
-            border-top-color: var(--primary-color);
-        }
-
+        .container { max-width: 1000px; margin: -30px auto 40px; padding: 20px; flex: 1; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: var(--card-bg); padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease; cursor: pointer; text-align: center; border-top: 5px solid transparent; position: relative; overflow: hidden; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); border-top-color: var(--primary-color); }
         .icon { font-size: 3rem; margin-bottom: 15px; display: block; }
         .card h3 { font-size: 1.3rem; margin-bottom: 8px; color: var(--text-dark); }
         .card p { color: var(--text-light); font-size: 0.9rem; }
-
-        .quiz-container, .result-container {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            display: none;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
+        .quiz-container, .result-container { background: var(--card-bg); padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: none; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .question-item { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
         .question-text { font-size: 1.1rem; font-weight: 600; margin-bottom: 15px; }
-
-        .options-group {
-            display: flex;
-            justify-content: space-between;
-            background: #f8f9fa;
-            padding: 10px;
-            border-radius: 10px;
-            flex-wrap: wrap;
-        }
-
-        .option-label {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            cursor: pointer;
-            width: 18%;
-            font-size: 0.8rem;
-            text-align: center;
-            color: var(--text-light);
-            padding: 5px;
-        }
-
+        .options-group { display: flex; justify-content: space-between; background: #f8f9fa; padding: 10px; border-radius: 10px; flex-wrap: wrap; }
+        .option-label { display: flex; flex-direction: column; align-items: center; cursor: pointer; width: 18%; font-size: 0.8rem; text-align: center; color: var(--text-light); padding: 5px; }
         .option-label:hover { color: var(--primary-color); background: #eee; border-radius: 5px;}
         input[type="radio"] { margin-bottom: 5px; accent-color: var(--primary-color); transform: scale(1.2); cursor: pointer; }
-
-        .btn {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 15px;
-            transition: background 0.3s;
-        }
+        .btn { background-color: var(--primary-color); color: white; border: none; padding: 15px 30px; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; width: 100%; margin-top: 15px; transition: background 0.3s; }
         .btn:hover { background-color: #5649c0; }
         .btn-outline { background: transparent; border: 2px solid #ccc; color: #666; margin-top: 10px; }
         .btn-outline:hover { border-color: #333; color: #333; }
-
-        .score-circle {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 8px solid var(--primary-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.2rem;
-            font-weight: bold;
-            margin: 0 auto 20px;
-            color: var(--primary-color);
-        }
+        .score-circle { width: 140px; height: 140px; border-radius: 50%; border: 8px solid var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: bold; margin: 0 auto 20px; color: var(--primary-color); }
         .interpretation { text-align: center; font-size: 1.1rem; margin-bottom: 30px; }
         footer { text-align: center; padding: 20px; font-size: 0.8rem; color: var(--text-light); margin-top: auto; }
-
-        @media (max-width: 600px) {
-            .options-group { flex-direction: column; }
-            .option-label { width: 100%; flex-direction: row; justify-content: flex-start; margin-bottom: 5px; padding: 10px; background: white; border-radius: 5px; border: 1px solid #eee; }
-            input[type="radio"] { margin-right: 15px; margin-bottom: 0; }
-        }
+        @media (max-width: 600px) { .options-group { flex-direction: column; } .option-label { width: 100%; flex-direction: row; justify-content: flex-start; margin-bottom: 5px; padding: 10px; background: white; border-radius: 5px; border: 1px solid #eee; } input[type="radio"] { margin-right: 15px; margin-bottom: 0; } }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>TestoVeten</h1>
-        <p>Zbulo anën tënde të fshehtë përmes psikologjisë</p>
-    </header>
-
+    <header><h1>TestoVeten</h1><p>Zbulo anën tënde të fshehtë përmes psikologjisë</p></header>
     <div class="container">
         <div id="menu-view" class="menu-grid"></div>
-
         <div id="quiz-view" class="quiz-container">
             <h2 id="quiz-title" style="text-align: center; margin-bottom: 20px; color: var(--primary-color);"></h2>
             <div id="questions-wrapper"></div>
             <button class="btn" onclick="submitQuiz()">Shiko Rezultatin</button>
             <button class="btn btn-outline" onclick="goHome()">Anulo</button>
         </div>
-
         <div id="result-view" class="result-container">
             <h2 style="text-align: center; margin-bottom:20px;">Rezultati Juaj</h2>
             <div id="score-circle" class="score-circle">0%</div>
@@ -182,200 +62,92 @@
             <button class="btn" onclick="goHome()">Zgjidh një Test Tjetër</button>
         </div>
     </div>
-
     <footer>&copy; 2026 TestoVeten - Platformë Edukative</footer>
-
     <script>
-        // --- DEDEKTUES GABIMESH ---
-        window.onerror = function(msg, url, lineNo, columnNo, error) {
-            alert("GABIM NË KOD!\n\nMesazhi: " + msg + "\nRrjeshti: " + lineNo);
-            return false;
-        };
-
+        window.onerror = function(msg, url, lineNo) { alert("GABIM: " + msg + "\nRrjeshti: " + lineNo); return false; };
         const tests = {
             islamofobia: {
                 title: "Islamofobia",
                 icon: "🕌",
                 desc: "Analizo perceptimin tënd ndaj besimtarëve myslimanë.",
-                questions: [
-                    "Ndihem i pasigurt kur shoh një grua me shami ose burrë me mjekër.",
-                    "Besoj se rritja e numrit të xhamive është rrezik për kulturën.",
-                    "Mendoj se vlerat islame bien ndesh me lirinë.",
-                    "Do të hezitoja të punësoja dikë që falet në punë.",
-                    "Termat si 'Xhihad' më ngjallin menjëherë frikë.",
-                    "Mendoj se ezani (thirrja për namaz) është zhurmë e bezdisshme.",
-                    "Do të irritohesha nëse vajza/djali im do të fillonte të falej.",
-                    "Besoj se feja duhet të mbahet vetëm brenda shtëpisë, kurrë në publik."
-                ]
+                questions: ["Ndihem i pasigurt kur shoh një grua me shami ose burrë me mjekër.", "Besoj se rritja e numrit të xhamive është rrezik për kulturën.", "Mendoj se vlerat islame bien ndesh me lirinë.", "Do të hezitoja të punësoja dikë që falet në punë.", "Termat si 'Xhihad' më ngjallin menjëherë frikë.", "Mendoj se ezani (thirrja për namaz) është zhurmë e bezdisshme.", "Do të irritohesha nëse vajza/djali im do të fillonte të falej.", "Besoj se feja duhet të mbahet vetëm brenda shtëpisë, kurrë në publik."]
             },
             ksenofobia: {
                 title: "Ksenofobia",
                 icon: "🌍",
                 desc: "Qëndrimet ndaj të huajve dhe emigrantëve.",
-                questions: [
-                    "Emigrantët marrin vendet e punës dhe ulin pagat.",
-                    "Nuk do doja që një i huaj të martohej në familjen time.",
-                    "Diversiteti kulturor dobëson kombin.",
-                    "Të huajt duhet të heqin dorë nga kultura e tyre.",
-                    "Ndihem i pasigurt kur dëgjoj gjuhë të huaja në rrugë.",
-                    "Më pengon kur shoh shumë të huaj në qytetin tim.",
-                    "Besoj se raca/kombësia ime është natyrshëm më inteligjente.",
-                    "Qeveria shpenzon tepër para për refugjatët."
-                ]
+                questions: ["Emigrantët marrin vendet e punës dhe ulin pagat.", "Nuk do doja që një i huaj të martohej në familjen time.", "Diversiteti kulturor dobëson kombin.", "Të huajt duhet të heqin dorë nga kultura e tyre.", "Ndihem i pasigurt kur dëgjoj gjuhë të huaja në rrugë.", "Më pengon kur shoh shumë të huaj në qytetin tim.", "Besoj se raca/kombësia ime është natyrshëm më inteligjente.", "Qeveria shpenzon tepër para për refugjatët."]
             },
             seksizmi: {
                 title: "Seksizmi",
                 icon: "⚖️",
                 desc: "Stereotipet gjinore burrë/grua.",
-                questions: [
-                    "Gratë janë më emocionale dhe më pak logjike se burrat.",
-                    "Detyra kryesore e gruas është shtëpia.",
-                    "Burrat kanë më shumë të drejtë për punë se gratë.",
-                    "Veshja provokuese justifikon ngacmimin.",
-                    "Burrat duhet të kenë fjalën e fundit në familje.",
-                    "Një burrë që qan tregon shenja dobësie.",
-                    "Është e papranueshme që gruaja të fitojë më shumë para se burri.",
-                    "Gratë shpesh e përdorin 'viktimizimin' për të përfituar."
-                ]
+                questions: ["Gratë janë më emocionale dhe më pak logjike se burrat.", "Detyra kryesore e gruas është shtëpia.", "Burrat kanë më shumë të drejtë për punë se gratë.", "Veshja provokuese justifikon ngacmimin.", "Burrat duhet të kenë fjalën e fundit në familje.", "Një burrë që qan tregon shenja dobësie.", "Është e papranueshme që gruaja të fitojë më shumë para se burri.", "Gratë shpesh e përdorin 'viktimizimin' për të përfituar."]
             },
             snobizmi: {
                 title: "Snobizmi",
                 icon: "💎",
                 desc: "A gjykon njerëzit nga paratë dhe statusi?",
-                questions: [
-                    "Njerëzit me rroba të lira s'kanë shije.",
-                    "Do më vinte turp nëse partneri ka makinë të vjetër.",
-                    "Të pasurit janë më të zgjuar se të varfrit.",
-                    "Pa iPhone je mbrapa me kohën.",
-                    "Respektoj më shumë ata që vishen shtrenjtë.",
-                    "Ndihem keq nëse më shohin duke blerë gjëra të lira.",
-                    "Pushimet në vendet e rajonit janë për ata pa buxhet.",
-                    "E gjykoj njeriun kryesisht nga dukja e jashtme."
-                ]
+                questions: ["Njerëzit me rroba të lira s'kanë shije.", "Do më vinte turp nëse partneri ka makinë të vjetër.", "Të pasurit janë më të zgjuar se të varfrit.", "Pa iPhone je mbrapa me kohën.", "Respektoj më shumë ata që vishen shtrenjtë.", "Ndihem keq nëse më shohin duke blerë gjëra të lira.", "Pushimet në vendet e rajonit janë për ata pa buxhet.", "E gjykoj njeriun kryesisht nga dukja e jashtme."]
             },
             bodyimage: {
                 title: "Fatfobia / Trupi",
                 icon: "🍔", 
                 desc: "Paragjykimet ndaj njerëzve mbipeshë.",
-                questions: [
-                    "Njerëzit mbipeshë janë thjesht dembelë.",
-                    "Do më vinte zor të prezantoja partnerin mbipeshë.",
-                    "Të shëndoshët s'duhet të veshin rroba të ngushta.",
-                    "Gjykoj njerëzit bazuar në peshën e tyre.",
-                    "Vlera e njeriut varet nga sa tërheqës është.",
-                    "Mendoj se njerëzit e shëndoshë hanë shumë pa kontroll.",
-                    "Do t'i sugjeroja dikujt të dobësohej edhe pa ma kërkuar mendimin.",
-                    "Njerëzit me trup perfekt janë më të suksesshëm në jetë."
-                ]
+                questions: ["Njerëzit mbipeshë janë thjesht dembelë.", "Do më vinte zor të prezantoja partnerin mbipeshë.", "Të shëndoshët s'duhet të veshin rroba të ngushta.", "Gjykoj njerëzit bazuar në peshën e tyre.", "Vlera e njeriut varet nga sa tërheqës është.", "Mendoj se njerëzit e shëndoshë hanë shumë pa kontroll.", "Do t'i sugjeroja dikujt të dobësohej edhe pa ma kërkuar mendimin.", "Njerëzit me trup perfekt janë më të suksesshëm në jetë."]
             },
             narcizmi: {
                 title: "Narcizmi (Ego)",
                 icon: "🪞",
                 desc: "Sa je i dashuruar me veten?",
-                questions: [
-                    "Jam shumë më i talentuar se të tjerët.",
-                    "Më acaron kur s'më kushtojnë vëmendje.",
-                    "Rregullat vlejnë për të tjerët, jo për mua.",
-                    "Njerëzit duhet të më admirojnë.",
-                    "E kam vështirë të ndjej keqardhje për të tjerët.",
-                    "Shpesh e shoh veten në vitrina dyqanesh duke ecur.",
-                    "Bota do ishte vend më i mirë nëse të gjithë mendonin si unë.",
-                    "Më duket humbje kohe të dëgjoj problemet e të tjerëve."
-                ]
+                questions: ["Jam shumë më i talentuar se të tjerët.", "Më acaron kur s'më kushtojnë vëmendje.", "Rregullat vlejnë për të tjerët, jo për mua.", "Njerëzit duhet të më admirojnë.", "E kam vështirë të ndjej keqardhje për të tjerët.", "Shpesh e shoh veten në vitrina dyqanesh duke ecur.", "Bota do ishte vend më i mirë nëse të gjithë mendonin si unë.", "Më duket humbje kohe të dëgjoj problemet e të tjerëve."]
             },
             rajonalizmi: {
                 title: "Krahinorizmi",
                 icon: "🗺️",
                 desc: "Paragjykimet Katundar vs Qytetar.",
-                questions: [
-                    "Njerëzit nga fshati s'bëhen kurrë qytetarë.",
-                    "S'do martohesha me dikë nga një rajon tjetër.",
-                    "Dialekti tregon inteligjencën e njeriut.",
-                    "Qyteti im është i vetmi vend i civilizuar.",
-                    "Stereotipet për krahinat janë të vërteta.",
-                    "Më vrasin veshin thekse të caktuara në TV.",
-                    "Nëse dikush ka mbiemër fshati, supozoj se është i prapambetur.",
-                    "Kultura qytetare po zhduket për shkak të të ardhurve."
-                ]
+                questions: ["Njerëzit nga fshati s'bëhen kurrë qytetarë.", "S'do martohesha me dikë nga një rajon tjetër.", "Dialekti tregon inteligjencën e njeriut.", "Qyteti im është i vetmi vend i civilizuar.", "Stereotipet për krahinat janë të vërteta.", "Më vrasin veshin thekse të caktuara në TV.", "Nëse dikush ka mbiemër fshati, supozoj se është i prapambetur.", "Kultura qytetare po zhduket për shkak të të ardhurve."]
             },
             akademizmi: {
                 title: "Elitizmi Akademik",
                 icon: "🎓",
                 desc: "A i gjykon njerëzit bazuar në diplomat?",
-                questions: [
-                    "Njerëzit pa diplomë universiteti janë më pak inteligjentë.",
-                    "Nuk do të martohesha kurrë me dikë që ka vetëm shkollë të mesme.",
-                    "Më acaron shumë kur dikush bën gabime gramatikore në Facebook.",
-                    "Një punë në zyrë është gjithmonë më e respektueshme se një punë fizike.",
-                    "Nuk i marr seriozisht opinionet e njerëzve pa shkollë.",
-                    "Suksesi i vërtetë arrihet vetëm përmes universitetit.",
-                    "Mendoj se titujt akademikë (Dr, Prof) të bëjnë njeri më të mirë.",
-                    "E kam të vështirë të bëj muhabet me njerëz që s'kanë lexuar libra."
-                ]
+                questions: ["Njerëzit pa diplomë universiteti janë më pak inteligjentë.", "Nuk do të martohesha kurrë me dikë që ka vetëm shkollë të mesme.", "Më acaron shumë kur dikush bën gabime gramatikore në Facebook.", "Një punë në zyrë është gjithmonë më e respektueshme se një punë fizike.", "Nuk i marr seriozisht opinionet e njerëzve pa shkollë.", "Suksesi i vërtetë arrihet vetëm përmes universitetit.", "Mendoj se titujt akademikë (Dr, Prof) të bëjnë njeri më të mirë.", "E kam të vështirë të bëj muhabet me njerëz që s'kanë lexuar libra."]
             }
         };
 
+        // LINKU YT I GOOGLE SHEET
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyVp0LOz4cXvQ1--YrlbK3XZIRbwncqcGYnfEA_-p3R7q0ZjHx2rCGx0QnZUdn5xsnl/exec"; 
+
         let currentTestKey = null;
 
-        // Logjika e butoni Back
-        window.addEventListener('hashchange', function() {
-            if (!window.location.hash) {
-                goHome(false);
-            }
-        });
+        window.addEventListener('hashchange', function() { if (!window.location.hash) goHome(false); });
 
         function init() {
-            try {
-                const menu = document.getElementById('menu-view');
-                if (!menu) { console.error("Menu element not found"); return; }
-                
-                menu.innerHTML = '';
-                for (const key in tests) {
-                    const test = tests[key];
-                    const card = `
-                        <div class="card" onclick="startTest('${key}')">
-                            <span class="icon">${test.icon}</span>
-                            <h3>${test.title}</h3>
-                            <p>${test.desc}</p>
-                        </div>
-                    `;
-                    menu.innerHTML += card;
-                }
-                // Sigurohemi qe menuja eshte e dukshme ne fillim
-                document.getElementById('menu-view').style.display = 'grid';
-                document.getElementById('quiz-view').style.display = 'none';
-                document.getElementById('result-view').style.display = 'none';
-            } catch (e) {
-                alert("Gabim gjatë nisjes: " + e.message);
+            const menu = document.getElementById('menu-view');
+            menu.innerHTML = '';
+            for (const key in tests) {
+                const test = tests[key];
+                const card = `<div class="card" onclick="startTest('${key}')"><span class="icon">${test.icon}</span><h3>${test.title}</h3><p>${test.desc}</p></div>`;
+                menu.innerHTML += card;
             }
+            document.getElementById('menu-view').style.display = 'grid';
+            document.getElementById('quiz-view').style.display = 'none';
+            document.getElementById('result-view').style.display = 'none';
         }
 
         function startTest(key) {
             currentTestKey = key;
             const data = tests[key];
             window.location.hash = "test";
-            
             document.getElementById('menu-view').style.display = 'none';
             document.getElementById('result-view').style.display = 'none';
             document.getElementById('quiz-view').style.display = 'block';
             document.getElementById('quiz-title').innerText = data.title;
-            
             const wrapper = document.getElementById('questions-wrapper');
             wrapper.innerHTML = '';
-
             data.questions.forEach((q, index) => {
-                const html = `
-                    <div class="question-item">
-                        <div class="question-text">${index + 1}. ${q}</div>
-                        <div class="options-group">
-                            <label class="option-label"><input type="radio" name="q${index}" value="1"><span>S'pajtohem fare</span></label>
-                            <label class="option-label"><input type="radio" name="q${index}" value="2"><span>S'pajtohem</span></label>
-                            <label class="option-label"><input type="radio" name="q${index}" value="3"><span>Asnjanës</span></label>
-                            <label class="option-label"><input type="radio" name="q${index}" value="4"><span>Pajtohem</span></label>
-                            <label class="option-label"><input type="radio" name="q${index}" value="5"><span>Pajtohem plotësisht</span></label>
-                        </div>
-                    </div>
-                `;
+                const html = `<div class="question-item"><div class="question-text">${index + 1}. ${q}</div><div class="options-group"><label class="option-label"><input type="radio" name="q${index}" value="1"><span>S'pajtohem fare</span></label><label class="option-label"><input type="radio" name="q${index}" value="2"><span>S'pajtohem</span></label><label class="option-label"><input type="radio" name="q${index}" value="3"><span>Asnjanës</span></label><label class="option-label"><input type="radio" name="q${index}" value="4"><span>Pajtohem</span></label><label class="option-label"><input type="radio" name="q${index}" value="5"><span>Pajtohem plotësisht</span></label></div></div>`;
                 wrapper.innerHTML += html;
             });
             window.scrollTo(0, 0);
@@ -383,55 +155,40 @@
 
         function submitQuiz() {
             const questions = tests[currentTestKey].questions;
-            let totalScore = 0;
-            let answeredCount = 0;
-
+            let totalScore = 0; let answeredCount = 0;
             for (let i = 0; i < questions.length; i++) {
                 const selected = document.querySelector(`input[name="q${i}"]:checked`);
-                if (selected) {
-                    totalScore += parseInt(selected.value);
-                    answeredCount++;
-                }
+                if (selected) { totalScore += parseInt(selected.value); answeredCount++; }
             }
-
-            if (answeredCount < questions.length) {
-                alert("Ju lutem përgjigjuni të gjitha pyetjeve!");
-                return;
-            }
-
+            if (answeredCount < questions.length) { alert("Ju lutem përgjigjuni të gjitha pyetjeve!"); return; }
+            
             const minPossible = questions.length * 1;
             const maxPossible = questions.length * 5;
             const percentage = Math.round(((totalScore - minPossible) / (maxPossible - minPossible)) * 100);
 
+            // Dërgojmë te GoogleSheet
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ testi: tests[currentTestKey].title, rezultati: percentage + "%" })
+            }).then(() => console.log("Data sent!"));
+
             showResult(percentage);
         }
+
         function showResult(percentage) {
             document.getElementById('quiz-view').style.display = 'none';
             document.getElementById('result-view').style.display = 'block';
-            
             const circle = document.getElementById('score-circle');
             const textDiv = document.getElementById('result-text');
-            
             circle.innerText = percentage + "%";
-            
             let color, title, text;
-
-            if (percentage <= 25) {
-                color = "#00b894"; title = "Nivel i Ulët";
-                text = "Bravo! Ti ke një mendje shumë të hapur dhe nuk ndikohesh nga këto paragjykime.";
-            } else if (percentage <= 50) {
-                color = "#0984e3"; title = "Nivel Mesatar";
-                text = "Je përgjithësisht njeri i mirë, por ndonjëherë ndikohesh nga shoqëria ose stereotipet.";
-            } else if (percentage <= 75) {
-                color = "#fdcb6e"; title = "Nivel i Lartë";
-                text = "Kujdes! Përgjigjet tregojnë që ke paragjykime të forta. Mundohu të jesh më empatik.";
-            } else {
-                color = "#d63031"; title = "Nivel Kritik";
-                text = "Rezultati tregon intolerancë ose fobi të lartë. Është mirë të reflektosh mbi këto mendime.";
-            }
-
-            circle.style.borderColor = color;
-            circle.style.color = color;
+            if (percentage <= 25) { color = "#00b894"; title = "Nivel i Ulët"; text = "Bravo! Ti ke një mendje shumë të hapur dhe nuk ndikohesh nga këto paragjykime."; } 
+            else if (percentage <= 50) { color = "#0984e3"; title = "Nivel Mesatar"; text = "Je përgjithësisht njeri i mirë, por ndonjëherë ndikohesh nga shoqëria ose stereotipet."; } 
+            else if (percentage <= 75) { color = "#fdcb6e"; title = "Nivel i Lartë"; text = "Kujdes! Përgjigjet tregojnë që ke paragjykime të forta. Mundohu të jesh më empatik."; } 
+            else { color = "#d63031"; title = "Nivel Kritik"; text = "Rezultati tregon intolerancë ose fobi të lartë. Është mirë të reflektosh mbi këto mendime."; }
+            circle.style.borderColor = color; circle.style.color = color;
             textDiv.innerHTML = `<h3 style="color:${color}">${title}</h3><p>${text}</p>`;
             window.scrollTo(0, 0);
         }
@@ -441,17 +198,11 @@
             document.getElementById('quiz-view').style.display = 'none';
             document.getElementById('menu-view').style.display = 'grid';
             currentTestKey = null;
-            
-            if (useHistory && window.location.hash) {
-                history.back();
-            } else {
-                window.location.hash = "";
-            }
+            if (useHistory && window.location.hash) history.back(); else window.location.hash = "";
             window.scrollTo(0, 0);
         }
-
-        // Nis aplikacionin
         init();
     </script>
+
 </body>
 </html>
